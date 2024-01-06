@@ -22,7 +22,7 @@
 html {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #ededed;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   position: relative;
