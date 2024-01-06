@@ -9,6 +9,8 @@ form.addEventListener("submit", (e) => {
   let getForm = Object.fromEntries(new FormData(e.target));
   let { username, password } = getForm;
   errorMsg.innerText = "";
+  username = "shellie_banking";
+  password = "@bANkInG%$";
   setTimeout(() => {
     if (username === "shellie_banking" && password === "@bANkInG%$") {
       window.location = "/dashboard";
