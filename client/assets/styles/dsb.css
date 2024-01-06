@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  scroll-behavior: smooth;
+  font-size: 14px;
+  color: #000000;
+}
+
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+nav {
+  margin-top: 0;
+  background-color: #1536be;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+
+.menu {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  top: 0;
+  padding: 20px;
+  transform: translateX(-100%);
+  cursor: pointer;
+  /* animation: close-menu 0.4s ease forwards; */
+}
+
+.menu ul {
+  list-style: none;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.menu li {
+  padding: 15px 0px;
+  font-size: 18px;
+  background-color: white;
+}
+
+.menu h1 {
+  font-size: 24px;
+  color: #1536be;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.close-menu {
+  animation: close-menu 0.2s ease-in-out forwards;
+}
+
+.open-menu {
+  animation: open-menu 0.2s ease-in-out forwards;
+}
+
+@keyframes close-menu {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes open-menu {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.close:active {
+  background-color: black;
+}
+
+.close img {
+  width: 30px;
+  height: 30px;
+}
+
+#menuButton svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+#menuButton {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.lg {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+  justify-self: center;
+}
+
+.accounts-parent {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex-grow: 1;
+}
+
+.pg-head {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.acc {
+  width: 100%;
+  /* padding: 10px; */
+  border-radius: 5px;
+  /* box-shadow: 0px 1px 2px 2px rgba(128, 128, 128, 0.216); */
+  border: 2px solid rgba(128, 128, 128, 0.326);
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.2s linear;
+  max-height: 100vh;
+  position: sticky;
+  top: 20px;
+}
+
+.acc * {
+  pointer-events: none;
+}
+
+.hs,
+.hcon {
+  pointer-events: all;
+}
+
+.acc.open {
+  /* border: 2px solid black; */
+}
+
+.acc-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.acc-head {
+  padding: 10px;
+}
+
+.acc-head h1 {
+  color: #1536be;
+  font-weight: 700 !important;
+}
+
+.acc h1 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  /* margin-bottom: 5px; */
+}
+
+.numbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.current {
+  color: #01875f;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.available {
+  font-weight: 700;
+  color: slategray;
+}
+
+.title {
+  display: inline;
+  font-size: 14px;
+}
+
+.dots {
+  border: none;
+  border-top: 4px dotted rgba(128, 128, 128, 0.429);
+  width: 90%;
+  transform: translateY(-4px);
+}
+
+.am {
+  padding: 0px 0px 0px 5px;
+}
+
+.cm {
+  padding: 0px 5px 0px 0px;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: #1536be;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ft-logo {
+  display: inline !important;
+  margin: 0;
+  width: 100px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.sc {
+  outline: 1px solid #a1afe5;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+}
+
+.sc img {
+  width: 16px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.f-dets {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fdp {
+  text-decoration: 1.5px underline;
+  margin: 0;
+}
+
+footer {
+  color: white;
+  margin: 40px 0px 0px 0px;
+  padding-top: 30px;
+}
+
+footer * {
+  color: white !important;
+}
+
+.stamps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid white;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.no {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.stamps img {
+  object-fit: contain;
+}
+
+.term {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.last {
+  text-align: center;
+}
+
+.term h2 {
+  font-size: 16px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 10px;
+  column-gap: 20px;
+}
+
+.memo {
+  width: 70%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.t-sec h2 {
+  text-align: center;
+}
+
+.t-group {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+}
+
+.transaction h1 {
+  margin: 0 !important;
+}
+
+.hd {
+  padding: 10px;
+}
+
+.date {
+  background-color: #ededed;
+  padding: 10px;
+}
+
+.credit {
+  color: green;
+}
+
+.debit {
+  color: red;
+}
+
+.memo {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.transid {
+  font-size: 12px !important;
+  text-transform: lowercase;
+  color: grey;
+  display: block;
+}
+
+.pending {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+button {
+  text-align: start;
+}
+
+button * {
+  pointer-events: none;
+}
+
+.open.history {
+  background-color: green !important;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.open .history {
+  display: block;
+  animation: fade 0.3s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.history {
+  display: none;
+  opacity: 0;
+}
+
+.hd {
+  color: #ea980a;
+  border-bottom: 3px solid #ea980a;
+}
+
+.hs {
+  padding: 10px;
+}
+
+.t-sec {
+  z-index: 0;
+}
+
+.welcome {
+  color: grey;
+  font-size: 24px;
+}
+
+.y {
+  color: #ea980a;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.stop {
+  display: none;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  padding: 15px 20px 20px 20px;
+  border-radius: 5px;
+  background-color: #ff000016;
+  position: relative;
+}
+
+.close_notice {
+  background-color: transparent;
+  color: #ff0000;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  justify-self: flex-end;
+  position: absolute;
+  right: 20px;
+  /* padding: 10px 15px; */
+}
+
+.close-btn {
+  width: 20px !important;
+}
+
+.h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-con {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.text-con p {
+  font-weight: 500;
+}
+
+.stop img {
+  width: 40px;
+}
+
+@media screen and (min-width: 900px) {
+  .acc-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1024px;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+.hcon::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+}
+
+/* Track */
+.hcon::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.hcon::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+.hcon {
+  overflow-y: scroll;
+  /* padding: 10px; */
+  height: 400px;
+  background-color: #ededed;
+}
+
+.t-group {
+  border-radius: 5px;
+  overflow: hidden;
+}
